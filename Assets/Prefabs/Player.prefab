@@ -109,7 +109,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: cedc51a2bf2ef497fa0a03624e1c1d75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -187,3 +187,4 @@ MonoBehaviour:
   binnedKnockbackForceY: 10
   binnedTorque: 30
   recoverCountRequired: 5
+  goalYPosition: 100

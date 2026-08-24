@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float binnedTorque = 30f;          // 回転にかかるトルク（回転速度）
     [SerializeField] float recoverCountRequired = 5f;   // 復帰に必要な連打回数
 
+    [Header("ゴール（社長室）の設定")]
+    [SerializeField] float goalYPosition = 100f; // 何メートル（Y座標）で社長室に到達するか
+    bool isCleared = false; // クリア済みフラグ
+
     Rigidbody2D rb;
     float screenWidth;
     Camera mainCamera;
@@ -48,6 +52,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isCleared) return;
+
+        // ゴール判定（プレイヤーのY座標がゴールを超えたか？）
+        if (transform.position.y >= goalYPosition)
+        {
+            GameClear();
+            return;
+        }
+
         if (isStunned)
         {
             // 【気絶中】連打入力を監視して復帰ゲージを溜める
@@ -183,5 +196,20 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    void GameClear()
+    {
+        isCleared = true;
+        
+        // プレイヤーの動きを完全に止める
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll; // 物理挙動を完全に固める
+
+        // デバッグログで確認（まずはこれで動くかチェック！）
+        Debug.Log("🎉 社長室のドアを蹴破った！退職届を叩きつけろ！");
+        
+        // TODO: ステップ3で、ここに「クリア画面のUIを表示する処理」を入れます
     }
 }
