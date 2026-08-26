@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
-
+using System.Collections.Generic;
 public class BossTextSpawner : MonoBehaviour
 {
     // インスペクターで色ごとのパラメータをきれいに管理するための構造体
@@ -53,6 +53,8 @@ public class BossTextSpawner : MonoBehaviour
     Camera mainCamera;
     Transform playerTransform;
     float lastSpawnY;
+    bool isStopSpawning = false;
+    List<GameObject> activeObstaclesList = new List<GameObject>();
 
     void Start()
     {
@@ -68,7 +70,7 @@ public class BossTextSpawner : MonoBehaviour
 
     void Update()
     {
-        if (playerTransform == null) return;
+        if (playerTransform == null || isStopSpawning) return;
 
         if (playerTransform.position.y - lastSpawnY >= spawnIntervalDistance)
         {
@@ -85,6 +87,8 @@ public class BossTextSpawner : MonoBehaviour
         Vector3 spawnWorldPos = mainCamera.ViewportToWorldPoint(spawnTargetViewport);
 
         GameObject spawnedObstacle = Instantiate(bossTextPrefab, new Vector3(0f, spawnWorldPos.y, 0f), Quaternion.identity);
+
+        activeObstaclesList.Add(spawnedObstacle);
 
         BossTextObstacle obstacleScript = spawnedObstacle.GetComponent<BossTextObstacle>();
         if (obstacleScript != null)
@@ -130,6 +134,23 @@ public class BossTextSpawner : MonoBehaviour
 
             spawnedObstacle.transform.position = new Vector3(initialX, spawnWorldPos.y, 0f);
         }
+    }
+
+    public void StopAndClearObstacles()
+    {
+        isStopSpawning = true; 
+
+        foreach (GameObject obstacle in activeObstaclesList)
+        {
+            // すでに画面外判定等でDestroyされている可能性を考慮（Nullチェック）
+            if (obstacle != null)
+            {
+                Destroy(obstacle);
+            }
+        }
+
+        // リスト自体もきれいに空にする
+        activeObstaclesList.Clear();
     }
 
     void OnDrawGizmosSelected()

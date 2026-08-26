@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("ゴール（社長室）の設定")]
     [SerializeField] float goalYPosition = 100f; // 何メートル（Y座標）で社長室に到達するか
+     [SerializeField] GameObject clearUIPanel;  
+    [SerializeField] BossTextSpawner bossTextSpawner;
     bool isCleared = false; // クリア済みフラグ
 
     Rigidbody2D rb;
@@ -202,14 +204,24 @@ public class PlayerController : MonoBehaviour
     {
         isCleared = true;
         
+        if (bossTextSpawner != null)
+        {
+            bossTextSpawner.StopAndClearObstacles();
+        }
+
         // プレイヤーの動きを完全に止める
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         rb.constraints = RigidbodyConstraints2D.FreezeAll; // 物理挙動を完全に固める
-
-        // デバッグログで確認（まずはこれで動くかチェック！）
-        Debug.Log("🎉 社長室のドアを蹴破った！退職届を叩きつけろ！");
         
-        // TODO: ステップ3で、ここに「クリア画面のUIを表示する処理」を入れます
+        if (clearUIPanel != null)
+        {
+            clearUIPanel.SetActive(true);
+        }
+    }
+
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
