@@ -2,6 +2,7 @@
 using UnityEngine.InputSystem; // 新Input Systemを使用
 using UnityEngine.InputSystem.EnhancedTouch; // スマホタッチ用
 using UnityEngine.SceneManagement; // ゲームオーバー時のリトライ用
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,13 +25,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float goalYPosition = 100f; // 何メートル（Y座標）で社長室に到達するか
      [SerializeField] GameObject clearUIPanel;  
     [SerializeField] BossTextSpawner bossTextSpawner;
+
+    [Header("無敵時間の設定")]
+    [SerializeField] float invincibleDuration = 2.0f;
+    [SerializeField] float blinkInterval = 0.05f; 
+
     bool isCleared = false; // クリア済みフラグ
 
     Rigidbody2D rb;
+    SpriteRenderer spriteRenderer;
     float screenWidth;
     Camera mainCamera;
     // プレイヤーの状態管理フラグ
     bool isStunned = false;
+    bool isInvincible = false; 
     float currentRecoverProgress = 0f;
 
     void OnEnable()
@@ -50,6 +58,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         screenWidth = Screen.width;
         mainCamera = Camera.main;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (clearUIPanel != null) clearUIPanel.SetActive(false);
     }
 
     void Update()
@@ -117,8 +128,7 @@ public class PlayerController : MonoBehaviour
     // 【最重要】文字障害物にぶつかった時に、障害物側のスクリプトから呼ばれる関数
     public void HitByObstacle()
     {
-        // すでに気絶中（isStunned が true）なら、この関数の中身を即座に無視する！
-        if (isStunned) return; 
+        if (isStunned || isInvincible || isCleared) return; 
 
         isStunned = true;
         currentRecoverProgress = 0f;
@@ -185,7 +195,34 @@ public class PlayerController : MonoBehaviour
         // 復帰した瞬間に少しだけ上にフワッと浮かせる（立て直しの猶予用、お好みで）
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(Vector2.up * 4f, ForceMode2D.Impulse);
+
+        StartCoroutine(InvincibleRoutine());
     }
+
+    IEnumerator InvincibleRoutine()
+    {
+        isInvincible = true; // 無敵モードON
+        float timer = 0f;
+
+        // 指定された秒数（invincibleDuration）が経過するまでループ
+        while (timer < invincibleDuration)
+        {
+            if (spriteRenderer != null)
+            {
+                // 現在の透明度を反転させる（表示 ➔ 非表示 ➔ 表示...の切り替え）
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            }
+
+            // 指定された点滅間隔（秒）だけ、Unityの時間を一時停止して待つ
+            yield return new WaitForSeconds(blinkInterval);
+            timer += blinkInterval;
+        }
+
+        // 無敵時間が終わったら元に戻す
+        if (spriteRenderer != null) spriteRenderer.enabled = true; // 確実に表示状態に戻す
+        isInvincible = false; // 無敵モードOFF
+    }
+
 
     void CheckGameOver()
     {
