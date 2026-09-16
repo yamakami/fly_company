@@ -19,7 +19,7 @@ public class BossTextSpawner : MonoBehaviour
     [SerializeField] GameObject bossTextPrefab;
 
     [Header("生成バランス調整")]
-    [SerializeField] float spawnIntervalDistance = 5.0f; // 何メートル（ユニット）登るごとに生成するか
+    [SerializeField] float initialSpawnInterval = 5.0f; // スタート時の生成間隔（メートル）
     [SerializeField] float screenWidthBoundary = 3.0f;  // 左右の見えない壁の座標（画面端の基準）
 
     [Header("色ごとの性能カスタマイズ（黄・赤・紫の順に設定）")]
@@ -72,7 +72,7 @@ public class BossTextSpawner : MonoBehaviour
     {
         if (playerTransform == null || isStopSpawning) return;
 
-        if (playerTransform.position.y - lastSpawnY >= spawnIntervalDistance)
+        if (playerTransform.position.y - lastSpawnY >= initialSpawnInterval)
         {
             SpawnBossText();
             lastSpawnY = playerTransform.position.y;
@@ -151,6 +151,20 @@ public class BossTextSpawner : MonoBehaviour
 
         // リスト自体もきれいに空にする
         activeObstaclesList.Clear();
+    }
+
+    public void SetInitialSpawnInterval(float newInterval)
+    {
+        initialSpawnInterval = newInterval;
+    }
+
+    public void ResetSpawnerForNextLevel()
+    {
+        isStopSpawning = false;
+        if (playerTransform != null)
+        {
+            lastSpawnY = playerTransform.position.y;
+        }
     }
 
     void OnDrawGizmosSelected()

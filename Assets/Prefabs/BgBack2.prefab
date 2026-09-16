@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6060167753974855512}
   - component: {fileID: 4854456050717928012}
   m_Layer: 0
-  m_Name: BgBack
+  m_Name: BgBack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6a901c2e9dcb746c08ad229eb1b0cea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60d2bf36f1d8b408caff1966dfb39635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6a901c2e9dcb746c08ad229eb1b0cea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60d2bf36f1d8b408caff1966dfb39635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -283,7 +283,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6a901c2e9dcb746c08ad229eb1b0cea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60d2bf36f1d8b408caff1966dfb39635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -375,7 +375,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6a901c2e9dcb746c08ad229eb1b0cea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60d2bf36f1d8b408caff1966dfb39635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

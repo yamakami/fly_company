@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float goalYPosition = 100f; // 何メートル（Y座標）で社長室に到達するか
      [SerializeField] GameObject clearUIPanel;  
     [SerializeField] BossTextSpawner bossTextSpawner;
+    [SerializeField] TMPro.TextMeshProUGUI clearButtonText; 
 
     [Header("無敵時間の設定")]
     [SerializeField] float invincibleDuration = 2.0f;
@@ -251,10 +252,21 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = 0f;
         rb.constraints = RigidbodyConstraints2D.FreezeAll; // 物理挙動を完全に固める
         
-        if (clearUIPanel != null)
+        LevelManager lm = FindAnyObjectByType<LevelManager>();
+        if (lm != null && clearButtonText != null)
+        {
+            clearButtonText.text = lm.IsMaxLevel() ? "会社を完全に辞める" : "次のフロアへ進む";
+        }
+ 
+         if (clearUIPanel != null)
         {
             clearUIPanel.SetActive(true);
         }
+    }
+
+    public void SetGoalYPosition(float newGoal)
+    {
+        goalYPosition = newGoal;
     }
 
     public void RetryGame()
