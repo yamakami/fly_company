@@ -405,6 +405,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: bossTextPrefab
+      value: 
+      objectReference: {fileID: 6047193667905099532, guid: 03772a36c68c04979baf2318d9b72f68, type: 3}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: officeWordsList.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[0]'
+      value: "\u5B9A\u6642\u9000\u793E\u306F\u90FD\u5E02\u4F1D\u8AAC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[1]'
+      value: "\u30A2\u30B0\u30EA\u30FC\u3057\u3066\u304F\u3060\u3055\u3044"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[2]'
+      value: "PDCA\u304C\u56DE\u3063\u3066\u3044\u306A\u3044"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[3]'
+      value: "\u30A8\u30D3\u30C7\u30F3\u30B9\u306F\u3042\u308B\u306E\u304B\uFF1F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[4]'
+      value: "\u6301\u3061\u5E30\u3063\u3066\u691C\u8A0E\u3057\u307E\u3059"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[5]'
+      value: "\u30B3\u30DF\u30C3\u30C8\u30E1\u30F3\u30C8\u304C\u8DB3\u308A\u306A\u3044"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[6]'
+      value: "\u96FB\u8A71\u9CF4\u3063\u3066\u308B\u3088\uFF01"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[7]'
+      value: "\u898B\u7A4D\u3082\u308A\u3088\u308D\u3057\u304F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[8]'
+      value: "\u6025\u306A\u4ED5\u69D8\u5909\u66F4\u3067\u3059"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[9]'
+      value: "\u4ECA\u65E5\u4E2D\u306B\u3084\u3063\u3066\u304A\u3044\u3066"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[10]'
+      value: "\u9032\u6357\u3069\u3046\u3067\u3059\u304B\uFF1F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[11]'
+      value: "\u81F3\u6025\u30D0\u30B0\u5BFE\u5FDC\u3088\u308D\u3057\u304F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[12]'
+      value: "\u304A\u5BA2\u69D8\u30AF\u30EC\u30FC\u30E0\u5BFE\u5FDC\uFF01"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[13]'
+      value: "\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u306E\uFF1F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[14]'
+      value: "21\u6642\u304B\u3089\u7DCA\u6025\u4F1A\u8B70\u306D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312344260537151055, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
+      propertyPath: 'officeWordsList.Array.data[15]'
+      value: "\u7D42\u96FB\u306F\u3042\u304D\u3089\u30E1\u30ED\u30F3\uFF01"
+      objectReference: {fileID: 0}
     - target: {fileID: 2518430571320410223, guid: 1e91130bb0eb4451fb7b5476353ffab1, type: 3}
       propertyPath: m_Name
       value: BossTextSpawner
@@ -681,7 +753,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &434988165
@@ -951,6 +1023,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &875540888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.86047
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.57003
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2351175307755309109, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
+      propertyPath: m_Name
+      value: OfficeObstacleSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
 --- !u!1 &896872393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,63 +1859,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1366037593648556498
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341612417981042963, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2351175307755309109, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
-      propertyPath: m_Name
-      value: OfficeObstacleSpawner
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f0034ed451e5446de88f33e02971bfb9, type: 3}
 --- !u!1001 &4189059543728540247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2113,7 +2185,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 519420032}
   - {fileID: 374923366}
-  - {fileID: 1366037593648556498}
+  - {fileID: 875540888}
   - {fileID: 163181422}
   - {fileID: 6597994850160161653}
   - {fileID: 8682830080679215781}

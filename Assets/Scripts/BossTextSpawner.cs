@@ -48,6 +48,7 @@ public class BossTextSpawner : MonoBehaviour
         "お客様クレーム対応！",
         "まだ終わらないの？",
         "21時から緊急会議ね",
+        "終電はあきらメロン！",
     };
 
     Camera mainCamera;
