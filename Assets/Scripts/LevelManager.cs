@@ -19,6 +19,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] BossTextSpawner bossTextSpawner;
 
+    [Header("Goalコンポーネント")]
+    [SerializeField] Transform goalFloorTransform; 
+
     // 🛑 改善：静的変数（static）にすることで、SceneManager.LoadSceneをしてもステージ数がリセットされなくなります！
     private static int currentLevelIndex = 0; 
 
@@ -44,6 +47,12 @@ public class LevelManager : MonoBehaviour
                     renderer.sprite = currentLevel.backgroundSprite;
                 }
             }
+        }
+
+        if (goalFloorTransform != null)
+        {   
+            var offset = 4f;
+            goalFloorTransform.position = new Vector3(0f, currentLevel.goalYPosition + offset, 0f);
         }
 
         if (playerController != null)
